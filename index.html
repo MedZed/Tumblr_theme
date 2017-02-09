@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head>
+        {MobileAppHeaders}
+        <meta charset="utf-8">
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        {block:Description}
+        <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+
+        {block:Hidden}
+        <meta name="if:Sliding header" content="1">
+        <meta name="if:Show navigation" content="1">
+        <meta name="if:Endless scrolling" content="1">
+        <meta name="if:Syntax highlighting" content="0">
+        <meta name="select:Layout" content="regular" title="Regular">
+        <meta name="select:Layout" content="narrow" title="Narrow">
+        <meta name="select:Layout" content="grid" title="Grid">
+        <meta name="if:Related Posts" content="1">
+        <meta name="text:Disqus shortname" content="">
+        <meta name="text:Google analytics ID" content="">
+        
+                <!-- DEFAULTS -->
+        <meta name="if:Show people I follow" content="0"/>
+        <meta name="if:Reverse pagination" content="1"/>
+        {/block:Hidden}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#35465D">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+        <link rel="stylesheet" href="http://static.tumblr.com/qexbavb/ZpSodrpj0/main-min.css">
+        {block:IfSyntaxHighlighting}
+        <link rel="stylesheet" href="http://static.tumblr.com/ehm1tdz/2VWnye81h/tumblr-highlightjs.css">
+        {/block:IfSyntaxHighlighting}
+
+        <!-- HTML5 Shiv -->
+        <!--[if lt IE 9]>
+            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+        
+        <!--Bootstrap-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://use.fontawesome.com/5885a114d9.js"></script>
+
+
+        <style>
+        
+        *{
+            margin:0;
+            padding:0;
+        }
+            /* Colors */
+            body {
+                background: {BackgroundColor};
+            }
+body {
+    
+    padding-top:50px;
+
+}
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggle:hover {
+  background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+
+
+.navbar-default {
+
+position:fixed;
+z-index:999;
+top:0;
+border-radius:0;
+width:100%;
+
+}
+
+
+/*.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {*/
+/*    border-color: #101010;*/
+/*    background-color: #222;*/
+/*    padding-top:0;*/
+/*}*/
+
+.navbar-img img {
+    display: inline;
+
+}
+
+.navbar-header a {
+text-decoration:none;
+color:#000;
+font-size:17px;
+
+}
+.navbar-img{
+    margin-right:50px;
+}
+
+/*.navbar-default .navbar-toggle {*/
+/*text-align:center;*/
+
+/*}*/
+/*.navbar-inverse .navbar-toggle:hover{*/
+
+/*	background-color: #222;*/
+/*}*/
+/*.navbar-inverse .navbar-toggle:focus{*/
+
+/*	background-color: #222;*/
+/*}*/
+
+/*body > iframe:first-child { display: none !important; }*/
+/*.navbar-toggle .icon-bar {*/
+/*	background-color: #FFF;*/
+/*}*/
+
+/*.navbar-nav > .active > a,*/
+/*.navbar-nav > .active > a:hover,*/
+/*.navbar-nav > .active > a:focus {*/
+/*	color: #FFF;*/
+/*	background-color: #0FA6A1;*/
+/*}*/
+
+
+
+.jumbotron {
+    text-align:center;
+    background: url({HeaderImage}) no-repeat center;
+    height:40vh;
+    background-size: cover;
+    /*background-color: #000000;*/
+    background-position:center;
+}
+
+.jumbotron .desc_cont h2{
+    padding-top:15px;
+    color:{TitleColor};
+}
+
+.jumbotron .desc_cont{
+    width:60%;    
+
+position:relative;
+    margin:0 auto;
+    margin-top:10vh;
+    background-color:rgba(0,0,0,0.3);
+}
+
+.jumbotron .desc_cont h3{
+    font-size:12px;
+    color:{TitleColor};
+    padding:15px;
+}
+
+/*.container{*/
+    
+/*    border:1px solid black;*/
+/*}*/
+
+.photoset  img{    border:1px solid red;}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #101010;
+    background-color: #222;
+    margin-top: 17;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+}
+
+
+menu, ol, ul {
+    padding:0 ;
+ 
+}
+
+.thumbnail{border-radius:0;
+    background-color:{TitleColor};
+    height:350px;
+        padding: 25px 15px ;
+        border:1px solid rgba(0,0,0,0.6);;
+
+}
+.info{
+    height:25px;
+    width:100%;
+    text-align:center;
+    font-size:15px;
+    background-color:rgba(0,0,0,0);
+position:absolute;
+    top:0; left:0; right:0;
+    color:rgba(0,0,0,0);
+}
+.info a{color:#fff;}
+ .fa-retweet{color:#fff;}
+ 
+ .info:hover{color:#fff; background-color:rgba(0,0,0,0.6);}
+
+
+        </style>
+    </head>
+    <body>
+
+
+
+    
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button><a class="navbar-img">
+<img alt="Brand" height="50" src="{Favicon}" width="50"></a>
+              </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/" title="Aye Aye Captain!">Home</a></li>
+            <li><a href="/ask" title="Ask me shit ">Message</a></li>
+            <li><a href="/archive" title="View my blogging history here." target="_blank">Archive</a></li>
+            <li><a href="http://themedzed.tumblr.com" title="Theme Maker" target="_blank">Theme</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    
+ 
+
+
+
+
+
+
+
+<div class="jumbotron">
+
+<div class="desc_cont"><h2>{TITLE}</h2>
+<h3>{Description}</h3></div>
+
+
+</div>
+
+
+
+    <div class="container">
+
+
+        <ul id="posts" class="row ">
+            {block:Posts}
+            
+
+                {block:Text}
+                    <li class="post text col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}
+                                
+                            </a></h3>
+                        {/block:Title}{Body}
+                    </li>
+                {/block:Text}
+
+
+                {block:Photo}
+
+
+                    <li class="post photo col-md-3 thumbnail">                             
+                    <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photo}
+                
+                
+                {block:Panorama}
+                    <li class="post panorama col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Panorama}
+                
+                
+                {block:Photoset}
+                    <li class="post photoset col-md-3 thumbnail" style="max-height:600px;">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {Photoset-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photoset}
+                
+                
+                {block:Quote}
+                    <li class="post quote col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                {/block:Quote}
+                
+                
+                {block:Link}
+                    <li class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                {/block:Link}
+                
+                
+                {block:Chat}
+                    <li class="post chat col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                {/block:Chat}
+                
+                
+                {block:Video}
+                    <li class="post video col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {Video-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Video}
+                
+                
+                {block:Audio}
+                    <li class="post audio col-md-3 thumbnail">
+                                        <div class="info">
+                    <a href="{ReblogURL}">
+                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                    </a>
+                    
+                 {block:NoteCount}
+                    <a href="{Permalink}">{NoteCountWithLabel}</a>
+                {/block:NoteCount}
+                
+                    </div>
+                        {AudioEmbed}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Audio}{/block:Posts}
+        </ul>
+
+
+    <div class="row">
+        <center>
+                <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" >        
+        {block:PreviousPage}
+                <a class="page-link" href="{PreviousPage}"><h3>Previous </h3></a>
+            {/block:PreviousPage}</li>
+
+       <li class="page-item" >        
+        {block:NextPage}
+                <a class="page-link" href="{NextPage}"><h3> Next</h3></a>
+            {/block:NextPage}</li>
+  </ul>
+</nav></center>
+        
+        
+        
+    </div>
+        
+
+        
+        
+        
+
+        </div>
+          <!--Jquery js-->
+        <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+                        <!--Bootstrap js-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
